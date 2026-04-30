@@ -1,22 +1,30 @@
 # env
-export CLICOLOR=1
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    PROMPT='%n@%m %~ %# '
+else
+    PROMPT='%~ %# '
+fi
 
-# aliases
-alias grep='grep --color=auto'
-alias ll='ls -laF'
-alias python='python3'
+export CLICOLOR=1
+export LSCOLORS='Gxfxcxdxbxegedabagacad'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"
 export PATH="$HOME/.local/bin:$PATH"
 
+# aliases
+alias grep='grep --color=auto'
+alias ll='ls -laF'
+alias python='python3'
+
+alias claude='op run --env-file=$HOME/.env -- claude'
+
 # sfw
-alias npm="sfw npm"
-alias npx="sfw npx"
-alias yarn="sfw yarn"
-alias pnpm="sfw pnpm"
-alias pip="sfw pip"
-alias uv="sfw uv"
-alias cargo="sfw cargo"
+alias npm='sfw npm'
+alias npx='sfw npx'
+alias yarn='sfw yarn'
+alias pnpm='sfw pnpm'
+alias pip='sfw pip'
+alias uv='sfw uv'
+alias cargo='sfw cargo'

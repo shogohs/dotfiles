@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+{{ if eq .chezmoi.os "darwin" }}
+
+BREWFILE="$HOME/Brewfile"
+
+if [ ! -f "$BREWFILE" ]; then
+  echo "Brewfile not fount: $BREWFILE"
+  exit 1
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew bundle --file "$BREWFILE"
+
+{{ end }}
