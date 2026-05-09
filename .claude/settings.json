@@ -57,5 +57,5 @@
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true
   },
-  "autoMemoryEnabled": true
+  "autoMemoryEnabled": false
 }

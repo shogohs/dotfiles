@@ -1,13 +1,9 @@
-# SETUP
-
-1. Install chezmoi
-
-```bash
-sh -c "$(curl -fsLS get.chezmoi.io)"
-```
-
-2. Apply dotfiles
-
-```bash
-chezmoi init --apply <github-username>
-```
+# 
+./
+├──.claude/
+│    ├──CLAUDE.md
+│    ├──executable_statusline.sh
+│    └──settings.json
+├──.vimrc
+├──.zshrc
+└──Brewfile

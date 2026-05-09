@@ -8,10 +8,8 @@ fi
 export CLICOLOR=1
 export LSCOLORS='Gxfxcxdxbxegedabagacad'
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"
-export PATH="$HOME/.local/bin:$PATH"
+# npm
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # aliases
 alias grep='grep --color=auto'
